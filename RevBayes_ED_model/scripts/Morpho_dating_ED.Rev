@@ -1,0 +1,92 @@
+########################################################
+#
+# RevBayes Example: Morphological dating with ED model
+#
+# This file: Runs the full MCMC for ED model
+#
+# authors: Sergei Tarasov
+#
+# this script is build based on the global clock model for molecular data at
+# https://revbayes.github.io/tutorials/dating/global
+########################################################
+
+########################################################
+#
+# Exercise 1: the global molecular clock model
+#
+########################################################
+
+
+#######################
+# Reading in the Data #
+#######################
+
+# Import the molecular sequences #
+# this file contains only the taxa for which sequence data are available #
+chars <- readDiscreteCharacterData("data/TA-50char.nex")
+
+## helpers
+n_taxa <- chars.size()
+taxa <- chars.taxa()
+
+
+# Create some vector for the moves and monitors of this analysis
+moves    = VectorMoves()
+monitors = VectorMonitors()
+
+# Load the model files
+
+source("scripts/tree_BD.Rev") # BD tree prior
+
+source("scripts/clock_global.Rev") # Global clock model
+
+source("scripts/Q_ED.Rev") # Molecular substitution model (GTR+G)
+
+
+
+########
+# MCMC #
+########
+
+# initialize the model object #
+mymodel = model(Q_rate)
+
+
+# Create a vector of monitors #
+# 1. for the full model #
+monitors.append( mnModel(filename="output/TA_global.log", printgen=10) )
+
+# 2. the tree #
+monitors.append( mnFile(filename="output/TA_global.trees", printgen=10, timetree) )
+
+# 3. the screen #
+monitors.append( mnScreen(printgen=100, timetree) )
+
+
+# Initialize the MCMC object #
+mymcmc = mcmc(mymodel, monitors, moves, nruns=1, combine="mixed")
+
+### pre-burnin to tune the proposals
+mymcmc.burnin(generations=10000, tuningInterval=5000)
+
+# Run the MCMC #
+mymcmc.run(generations=50000, tuningInterval=500)
+
+
+
+########################
+# Summarizing the tree #
+########################
+
+# Read the trace file #
+trace = readTreeTrace("output/TA_global.trees")
+trace.setBurnin(0.5)
+
+# Maximum clade credibility tree #
+mccTree(trace, file="output/TA_global.mcc.tre" )
+
+#consensus tree
+consensusTree(trace, file="output/TA_cons_MJ.trees")
+
+# Quit RevBayes #
+q()
