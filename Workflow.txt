@@ -1,0 +1,83 @@
+To show:
+1. ED is ok for TC sensu Maddison
+2. ED is ok for TC TA sensu Tarasov 2019
+3. compare ED with HMM through model extension
+4. Run multiple runs
+
+#---------------------------------------------
+Commnds:
+nohup ./rb Morpho_TA_M2.Rev > M2_log.txt &
+nohup ./rb Morpho_TA_M3_exp.Rev > M3_log_exp.txt &
+nohup ./rb Morpho_TA_SMM_ind.Rev > SMM_ind_log.txt &
+
+nohup ./rb Morpho_TC_L_M5.Rev > M5_TC_L.txt &
+ps
+find ./ -name '*.tre' -exec cp -prv '{}' '/Users/taravser/Documents/My_papers/Reply2Goloboff/Rev/MorphoModels/run_2_trees' ';'
+
+
+#---------------------------------------------
+Variants of ED a/p:
+
+1. Q: diff EQ, pi: equal, Npar=3
+rates := [ [ 0.0,  q[2],  0.0,      0.0],
+           [ q[1], 0.0,  q[2]*0.5,  q[2]*0.5],
+           [ q[1],  q[1], 0.0,      q[3]],
+           [ q[1],  q[1], q[3],     0.0]]
+
+2. Q: diff EQ, pi: equlibrium, Npar=3
+rates := [ [ 0.0,  q[2],  0.0,      0.0],
+           [ q[1], 0.0,  q[2]*0.5,  q[2]*0.5],
+           [ q[1],  q[1], 0.0,      q[3]],
+           [ q[1],  q[1], q[3],     0.0]]
+
+3. Q: q=1; pi: equal, Npar=1
+a pa pp0 pp1
+a   -1  1   0   0
+pa   1 -3   1   1
+pp0  1  1  -3   1
+pp1  1  1   1  -3
+pi=(1/4, ...)
+
+4. Q: q=1; pi: equlibrium, Npar=1
+     a pa pp0 pp1
+a   -1  1   0   0
+pa   1 -3   1   1
+pp0  1  1  -3   1
+pp1  1  1   1  -3
+
+5. Q: q=1, pi: Inferred, Npar=4
+a pa pp0 pp1
+a   -1  1   0   0
+pa   1 -3   1   1
+pp0  1  1  -3   1
+pp1  1  1   1  -3
+
+6. Q: -q=1; pi: equal, Npar=1
+[ [ 0.0, 1.0, 0.0, 0.0],
+  [ 1/3, 0.0, 1/3, 1/3],
+  [ 1/3, 1/3, 0.0, 1/3],
+  [ 1/3, 1/3, 1/3, 0.0]]
+
+7. Q: -q=1; pi: equlibrium, Npar=1
+[ [ 0.0, 1.0, 0.0, 0.0],
+  [ 1/3, 0.0, 1/3, 1/3],
+  [ 1/3, 1/3, 0.0, 1/3],
+  [ 1/3, 1/3, 1/3, 0.0]]
+
+8. Q: -q=1; pi: Inferred, Npar=4
+  [ [ 0.0, 1.0, 0.0, 0.0],
+    [ 1/3, 0.0, 1/3, 1/3],
+    [ 1/3, 1/3, 0.0, 1/3],
+    [ 1/3, 1/3, 1/3, 0.0]]
+
+#-----------------------------
+Expanded Models
+
+rates :=  [[0.0, 0.0, 0.0, 0.0, 0.5, 0.5, 0.0, 0.0],
+           [0.0, 0.0, 0.0, 0.0, 0.5, 0.5, 0.0, 0.0],
+           [0.0, 0.0, 0.0, 0.0, 0.5, 0.5, 0.0, 0.0],
+           [0.0, 0.0, 0.0, 0.0, 0.5, 0.5, 0.0, 0.0],
+           [1/12, 1/12, 1/12, 1/12, 0.0, 0.0, 1/3, 1/3],
+           [1/12, 1/12, 1/12, 1/12, 0.0, 0.0, 1/3, 1/3],
+           [1/12, 1/12, 1/12, 1/12, 1/6, 1/6, 0.0, 1/3],
+           [1/12, 1/12, 1/12, 1/12, 1/6, 1/6, 1/3, 0.0]]

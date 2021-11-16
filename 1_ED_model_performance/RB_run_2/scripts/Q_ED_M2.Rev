@@ -1,0 +1,28 @@
+
+# Number of states in Q matrix
+#NUM_STATES=4
+
+# rates
+q_prior <- v(1,1,1)
+q ~ dnDirichlet(q_prior)
+moves.append( mvBetaSimplex(q, weight=3) )
+moves.append( mvDirichletSimplex(q, weight=1) )
+
+# declare rate matrix
+rates := [ [ 0.0,  q[2],  0.0, 0.0],
+           [ q[1], 0.0,  q[2]*0.5, q[2]*0.5],
+           [ q[1],  q[1], 0.0, q[3]],
+           [ q[1],  q[1], q[3], 0.0]]
+
+
+#make Q matrix
+Q_rate := fnFreeK(transition_rates=rates, rescaled=false, matrixExponentialMethod="eigen")
+
+# root freqs are taking at equilibrium
+# can be also euqla
+#root_freq<-simplex(1,1,1,1)
+root_freq := Q_rate.getStationaryFrequencies()
+
+#make dnPhyloCTMC
+phySeq ~ dnPhyloCTMC(tree=timetree, Q=Q_rate, rootFrequencies=root_freq, branchRates=branch_rates, type="Standard", coding="variable")
+phySeq.clamp(chars)

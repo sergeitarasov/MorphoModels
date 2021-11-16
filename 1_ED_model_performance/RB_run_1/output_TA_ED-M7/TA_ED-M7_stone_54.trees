@@ -1,0 +1,6 @@
+#RevBayes version (1.1.1)
+#Build from master (rapture-588-gae00cc) on Thu Feb 11 15:28:28 CST 2021
+Iteration	Posterior	Likelihood	Prior	timetree
+0	-863.889	-866.1716	2.282566	((D[&index=3]:0.484584,C[&index=1]:0.484584)[&index=5]:0.515416,(B[&index=2]:0.399186,A[&index=4]:0.399186)[&index=6]:0.600814)[&index=7]:0.000000;
+200	-637.8681	-639.4142	1.546087	((A[&index=4]:0.402923,(D[&index=3]:0.059670,B[&index=2]:0.059670)[&index=6]:0.343253)[&index=5]:0.597077,C[&index=1]:1.000000)[&index=7]:0.000000;
+400	-583.1227	-584.9111	1.788472	((A[&index=4]:0.763195,(B[&index=2]:0.493506,D[&index=3]:0.493506)[&index=6]:0.269689)[&index=5]:0.236805,C[&index=1]:1.000000)[&index=7]:0.000000;

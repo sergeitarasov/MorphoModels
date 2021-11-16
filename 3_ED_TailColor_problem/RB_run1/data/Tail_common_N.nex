@@ -1,0 +1,23 @@
+#NEXUS
+
+BEGIN DATA;
+	DIMENSIONS  NTAX=14 NCHAR=10;
+	FORMAT DATATYPE = STANDARD GAP = - MISSING = ? SYMBOLS = "  0 1";
+	MATRIX
+	red_f1       1111000000
+	red_f2       1111000000
+	blue_f1      1111000000
+	blue_f2      1111000000
+	no_tail_l3   1110000000
+	no_tail_l2   1100000000
+	no_tail_l1   1000000000
+	ano_tail_r1  0000100000
+	no_tail_r2   0000110000
+	no_tail_r3   0000111000
+	blue1        0000111100
+	blue2        0000111110
+	red1         0000111111
+	red2         0000111111
+
+;
+END;

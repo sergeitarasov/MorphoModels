@@ -1,0 +1,4 @@
+TA_ED-M3_exp, -303.59
+TA_ED-M6_exp, -309.68
+TA_SMM_ind, -334.739
+TA_SMM_sw, -328.313

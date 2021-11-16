@@ -1,0 +1,15 @@
+#NEXUS
+
+	Begin taxa;
+	Dimensions ntax=4;
+	Taxlabels
+		A
+		B
+		C
+		D
+		;
+End;
+
+Begin trees;
+tree TREE1 = [&U](A[&index=4]:1.000000,(B[&index=3]:0.499466,(D[&index=2]:0.324435,C[&index=1]:0.324435)[&index=5,posterior=0.908702,age_95%_HPD={0.216921,0.481358}]:0.175031)[&index=6,posterior=0.968616,age_95%_HPD={0.270906,0.787522}]:0.500534)[&index=7,posterior=1.000000,age_95%_HPD={1,1}]:0.000000;
+End;

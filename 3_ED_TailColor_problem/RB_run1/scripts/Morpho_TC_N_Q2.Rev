@@ -1,0 +1,94 @@
+########################################################
+#
+# RevBayes Example: Morphological dating with ED model
+#
+# This file: Runs the full MCMC for ED model
+#
+# authors: Sergei Tarasov
+#
+# this script is build based on the global clock model for molecular data at
+# https://revbayes.github.io/tutorials/dating/global
+########################################################
+
+#######################
+# Reading in the Data #
+#######################
+analysis_name = "Q2_TC_N"
+Q_file = "Q_TC_Q2.Rev"
+
+out_folder = "../output_" + analysis_name + "/"
+filenames <- v("../data/Tail_common_N.nex", "../data/Tail_char_50.nex")
+n_data_subsets <- filenames.size()
+#######################
+
+for (i in 1:n_data_subsets){
+   chars[i] <- readDiscreteCharacterData(filenames[i])
+}
+
+## helpers
+n_taxa <- chars[i].size()
+taxa <- chars[i].taxa()
+
+
+# Create some vector for the moves and monitors of this analysis
+moves    = VectorMoves()
+monitors = VectorMonitors()
+
+# Load the model files
+source("constraints.Rev") # topologu constraints
+
+source("tree_BD.Rev") # BD tree prior
+
+source("clock_global.Rev") # Global clock model
+
+source(Q_file) # Morphological substitution model
+
+
+
+
+########
+# MCMC #
+########
+
+# initialize the model object #
+mymodel = model(timetree)
+
+
+# Create a vector of monitors #
+# 1. for the full model #
+monitors.append( mnModel(filename= out_folder+ analysis_name + ".log", printgen=200) )
+
+# 2. the tree #
+monitors.append( mnFile(filename= out_folder + analysis_name + ".trees", printgen=200, version=TRUE, timetree) )
+
+# 3. the screen #
+monitors.append( mnScreen(printgen=200, timetree) )
+
+
+# Initialize the MCMC object #
+mymcmc = mcmc(mymodel, monitors, moves, nruns=1, combine="mixed")
+
+### pre-burnin to tune the proposals
+mymcmc.burnin(generations=5000, tuningInterval=500)
+
+# Run the MCMC # !!! CHANGE TO 50K
+mymcmc.run(generations=200000, tuningInterval=1000)
+
+
+
+########################
+# Summarizing the trees and results #
+########################
+
+# Read the trace file #
+trace = readTreeTrace(out_folder + analysis_name + ".trees")
+trace.setBurnin(0.3)
+
+# Maximum clade credibility tree #
+mccTree(trace, file= out_folder + analysis_name + ".mcc.tre")
+
+#consensus tree
+consensusTree(trace, file= out_folder + analysis_name + ".mjcon.tre")
+
+# Quit RevBayes #
+q()

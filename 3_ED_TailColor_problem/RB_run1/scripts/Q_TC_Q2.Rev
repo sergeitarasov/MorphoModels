@@ -1,0 +1,30 @@
+######## Q Matrix for common characters ##
+
+Q[1] := fnJC(2)
+root_freq1<-simplex(1,1)
+
+
+######### Q Matrix for Tail characters ###
+# rates
+q_prior <- v(1,1,1)
+q ~ dnDirichlet(q_prior)
+moves.append( mvBetaSimplex(q, weight=3) )
+moves.append( mvDirichletSimplex(q, weight=1) )
+
+rates := [ [ 0.0, q[1], q[1]],
+           [ q[2], 0.0, q[3]],
+           [ q[2], q[3], 0.0]]
+
+
+
+#make Q matrix
+Q[2] := fnFreeK(transition_rates=rates, rescaled=false, matrixExponentialMethod="eigen")
+root_freq2<-simplex(1,1,1)
+
+
+#make dnPhyloCTMC
+phySeq[1] ~ dnPhyloCTMC(tree=timetree, Q=Q[1], rootFrequencies=root_freq1, branchRates=branch_rates, type="Standard", coding="variable")
+phySeq[1].clamp(chars[1])
+
+phySeq[2] ~ dnPhyloCTMC(tree=timetree, Q=Q[2], rootFrequencies=root_freq2, branchRates=branch_rates, type="Standard", coding="variable")
+phySeq[2].clamp(chars[2])

@@ -1,0 +1,69 @@
+
+RevBayes version (1.1.1)
+Build from master (rapture-588-gae00cc) on Thu Feb 11 15:28:28 CST 2021
+
+Visit the website www.RevBayes.com for more information about RevBayes.
+
+RevBayes is free software released under the GPL license, version 3. Type 'license()' for details.
+
+To quit RevBayes type 'quit()' or 'q()'.
+
+
+> source("Morpho_TA_M1.Rev")
+   Processing file "Morpho_TA_M1.Rev"
+   Successfully read one character matrix from file '../data/TA-50char.nex'
+   Processing file "tree_BD.Rev"
+   Processing of file "tree_BD.Rev" completed
+   Processing file "clock_global.Rev"
+   Processing of file "clock_global.Rev" completed
+   Processing file "Q_ED_M1.Rev"
+   Processing of file "Q_ED_M1.Rev" completed
+   Processing file "/Users/taravser/Documents/My_papers/Reply2Goloboff/Rev/MorphoModels/RB_run_2/scripts/../output_TA_ED-M1/TA_ED-M1.trees"
+
+Progress:
+0---------------25---------------50---------------75--------------100
+********************************************************************
+
+   Compiling maximum clade credibility tree from 701 trees.
+   Summarizing clades ...
+
+Progress:
+0---------------25---------------50---------------75--------------100
+********************************************************************
+
+   Annotating tree ...
+  
+   (((C[&index=3]:0.326416,D[&index=4]:0.326416)[&index=5,posterior=0.998573,age_95%_HPD={0.183885,0.482386}]:0.609492,B[&index=1]:0.935907)[&index=6,posterior=0.447932,age_95%_HPD={0.820747,0.999617}]:0.064093,A[&index=2]:1.000000)[&index=7,posterior=1.000000,age_95%_HPD={1,1}]:0.000000;
+   Compiling majority rule consensus tree (cutoff = 0.5) from 701 trees.
+   Summarizing clades ...
+
+Progress:
+0---------------25---------------50---------------75--------------100
+********************************************************************
+
+   Annotating tree ...
+  
+   (B[&index=4]:1.000000,A[&index=3]:1.000000,(C[&index=2]:0.315563,D[&index=1]:0.315563)[&index=5,posterior=0.998573,age_95%_HPD={0.183885,0.482386}]:0.684437)[&index=6,posterior=1.000000,age_95%_HPD={1,1}]:0.000000;
+
+Running burn-in phase of Power Posterior sampler for 10000 iterations.
+The simulator uses 8 different moves in a random move schedule with 19.8 moves per iteration
+
+
+Progress:
+0---------------25---------------50---------------75--------------100
+********************************************************************
+
+
+Running power posterior analysis ...
+Step  1 / 11		****************************************
+Step  2 / 11		****************************************
+Step  3 / 11		****************************************
+Step  4 / 11		****************************************
+Step  5 / 11		****************************************
+Step  6 / 11		****************************************
+Step  7 / 11		****************************************
+Step  8 / 11		****************************************
+Step  9 / 11		****************************************
+Step 10 / 11		****************************************
+Step 11 / 11		****************************************
+   -308.515

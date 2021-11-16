@@ -1,0 +1,25 @@
+#NEXUS
+
+	Begin taxa;
+	Dimensions ntax=14;
+	Taxlabels
+		ano_tail_r1
+		blue1
+		blue2
+		blue_f1
+		blue_f2
+		no_tail_l1
+		no_tail_l2
+		no_tail_l3
+		no_tail_r2
+		no_tail_r3
+		red1
+		red2
+		red_f1
+		red_f2
+		;
+End;
+
+Begin trees;
+tree TREE1 = [&U]((no_tail_l1[&index=14]:0.962661,(no_tail_l2[&index=13]:0.938859,(no_tail_l3[&index=12]:0.917963,((red_f1[&index=11]:0.005535,red_f2[&index=10]:0.005535)[&index=15,posterior=1.000000,age_95%_HPD={0,0.025399}]:0.621780,(blue_f2[&index=9]:0.006337,blue_f1[&index=8]:0.006337)[&index=16,posterior=1.000000,age_95%_HPD={0,0.02544}]:0.620978)[&index=17,posterior=1.000000,age_95%_HPD={0.450446,0.796415}]:0.290648)[&index=18,posterior=1.000000,age_95%_HPD={0.828499,0.98565}]:0.020896)[&index=19,posterior=1.000000,age_95%_HPD={0.847734,0.992552}]:0.023802)[&index=20,posterior=1.000000,age_95%_HPD={0.872789,0.999859}]:0.037340,(ano_tail_r1[&index=7]:0.945645,(no_tail_r2[&index=6]:0.916718,(no_tail_r3[&index=5]:0.895052,(blue1[&index=4]:0.438086,(blue2[&index=3]:0.422690,(red1[&index=2]:0.004240,red2[&index=1]:0.004240)[&index=21,posterior=1.000000,age_95%_HPD={0,0.018041}]:0.418450)[&index=22,posterior=1.000000,age_95%_HPD={0.317515,0.536257}]:0.015396)[&index=23,posterior=1.000000,age_95%_HPD={0.321437,0.548298}]:0.456966)[&index=24,posterior=1.000000,age_95%_HPD={0.785067,0.982319}]:0.021666)[&index=25,posterior=1.000000,age_95%_HPD={0.808376,0.991469}]:0.028927)[&index=26,posterior=1.000000,age_95%_HPD={0.83407,0.999883}]:0.054356)[&index=27,posterior=1.000000,age_95%_HPD={1,1}]:0.000000;
+End;

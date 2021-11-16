@@ -1,0 +1,19 @@
+##### Constraints
+
+focal=clade("red_f1", "red_f2", "blue_f1", "blue_f2")
+left=clade("red_f1", "red_f2", "blue_f1", "blue_f2", "no_tail_l1", "no_tail_l2", "no_tail_l3")
+left1=clade("red_f1", "red_f2", "blue_f1", "blue_f2", "no_tail_l2", "no_tail_l3")
+left2=clade("red_f1", "red_f2", "blue_f1", "blue_f2", "no_tail_l3")
+
+#right=clade("red1", "red2", "blue1", "blue2", "not_tail_r1", "not_tail_r2", "not_tail_r3")
+right0=clade("red1", "red2", "blue1", "blue2", "no_tail_r2", "no_tail_r3", "ano_tail_r1")
+
+right1=clade("red1", "red2", "blue1", "blue2", "no_tail_r2", "no_tail_r3")
+right2=clade("red1", "red2", "blue1", "blue2", "no_tail_r3")
+right3=clade("red1", "red2", "blue1", "blue2")
+right4=clade("red1", "red2", "blue2")
+right5=clade("red1", "red2")
+
+constraints=[focal, left, left1, left2, right1, right2, right3, right4, right5, right0]
+
+#
