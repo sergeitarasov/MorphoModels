@@ -1,2 +1,4 @@
 # MorphoModels
- Scripts for running anatomically dependent characters in RevBayes
+ 
+ This repository contians scripts for reproducing analyses from the study "New phylogenetic Markov models for inapplicable morphological characters".
+ 
