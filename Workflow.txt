@@ -15,6 +15,11 @@ ps
 find ./ -name '*.tre' -exec cp -prv '{}' '/Users/taravser/Documents/My_papers/Reply2Goloboff/Rev/MorphoModels/run_2_trees' ';'
 
 
+nohup ./rb Morpho_TA_M3_exp.Rev > M2_log.txt &
+nohup ./rb Morpho_TA_M6_exp.Rev > M2_log.txt &
+nohup ./rb Morpho_TA_SMM_ind.Rev > M2_log.txt &
+nohup ./rb Morpho_TA_SMM_sw.Rev > M2_log.txt &
+
 #---------------------------------------------
 Variants of ED a/p:
 

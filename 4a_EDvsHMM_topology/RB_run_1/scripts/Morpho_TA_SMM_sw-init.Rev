@@ -1,0 +1,26 @@
+########################################################
+#
+# RevBayes Example: Morphological dating with ED model
+#
+# This file: Runs the full MCMC for ED model
+#
+# authors: Sergei Tarasov
+#
+# this script is build based on the global clock model for molecular data at
+# https://revbayes.github.io/tutorials/dating/global
+########################################################
+
+
+
+Nruns=1000
+Q_file = "Q_SMM_sw.Rev"
+folder_out="out_SMM_sw_M6"
+
+for (i in 550:Nruns) {
+  analysis_name = "r" +i+"_TA_SMM_sw"
+  out_folder = "../output/"+ folder_out + "/out_" + analysis_name + "/"
+  chars <- readDiscreteCharacterData("../data_exp/"+"r" +i+ "_10ch.nex")
+  source("Morpho_TA_SMM_sw.Rev")
+}
+
+q()

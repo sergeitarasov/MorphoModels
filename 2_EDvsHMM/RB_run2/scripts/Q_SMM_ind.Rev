@@ -51,7 +51,8 @@ Q_rate := fnFreeK(transition_rates=rates, rescaled=true, matrixExponentialMethod
 
 # root freqs are taking at equilibrium
 # can be also euqla
-root_freq<-simplex(1,1,1,1, 1,1,1,1)
+root_freq<-simplex(1,1,1,1, 2,2,4,4)
+#root_freq<-simplex(1,1,1,1, 1,1,1,1)
 #root_freq := Q_rate.getStationaryFrequencies()
 
 # inferring pi

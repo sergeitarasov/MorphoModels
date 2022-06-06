@@ -1,0 +1,12 @@
+#NEXUS
+[Data written by write.nexus.RevBayes,  Mon May 16 16:39:39 2022 ]
+BEGIN DATA;
+ DIMENSIONS NTAX=4 NCHAR=10;
+FORMAT DATATYPE = STANDARD GAP = - MISSING = ? SYMBOLS ="0 1 2 3 4 5 6 7 8 9";
+MATRIX
+'t1' 677(4 5)(4 5)7766(4 5)
+'t3' 7(4 5)(4 5)6(0 1 2 3)(0 1 2 3)(4 5)(4 5)77
+'t4' 7(4 5)(4 5)6(0 1 2 3)(0 1 2 3)(4 5)(4 5)77
+'t2' 7(4 5)(4 5)6(0 1 2 3)(0 1 2 3)(4 5)(4 5)77
+;
+ END;

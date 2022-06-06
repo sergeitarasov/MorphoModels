@@ -1,0 +1,8 @@
+library("phytools")
+#devtools::install_github("sergeitarasov/rphenoscate", build_vignettes = TRUE)
+library(rphenoscate)
+library(plyr)
+library(phangorn)
+source('write_nexus_RB.R')
+source('Functions.R')
+library(stringr)

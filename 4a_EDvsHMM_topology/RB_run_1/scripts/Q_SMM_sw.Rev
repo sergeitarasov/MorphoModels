@@ -1,0 +1,63 @@
+
+# Number of states in Q matrix
+#NUM_STATES=4
+
+# rates
+#q_prior <- v(1,1,1)
+#q ~ dnDirichlet(q_prior)
+#moves.append( mvBetaSimplex(q, weight=3) )
+#moves.append( mvDirichletSimplex(q, weight=1) )
+
+# declare rate matrix
+# NUM_STATES=8
+#
+# # declare rate matrix
+# for (i in 1:NUM_STATES) {
+#   for (j in 1:NUM_STATES) {
+#     rates[i][j] <-0.0
+#   }
+# }
+#
+# rates[1][5]<-1.0
+# rates[2][6]<-1.0
+# rates[3][7]<-1.0
+# rates[4][8]<-1.0
+# rates[5][1]<-1.0
+# rates[5][7]<-1.0
+# rates[6][2]<-1.0
+# rates[6][8]<-1.0
+# rates[7][3]<-1.0
+# rates[7][5]<-1.0
+# rates[7][8]<-1.0
+# rates[8][4]<-1.0
+# rates[8][6]<-1.0
+# rates[8][7]<-1.0
+
+rates :=  [[0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0],
+           [0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0],
+           [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0],
+           [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0],
+           [1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0],
+           [0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0],
+           [0.0, 0.0, 1.0, 0.0, 1.0, 0.0, 0.0, 1.0],
+           [0.0, 0.0, 0.0, 1.0, 0.0, 1.0, 1.0, 0.0]]
+
+#make rate matrix
+Q_rate := fnFreeK(transition_rates=rates, rescaled=true, matrixExponentialMethod="eigen")
+#Q_rate := fnFreeK(transition_rates=rates, rescaled=false, matrixExponentialMethod="eigen")
+
+# root freqs are taking at equilibrium
+# can be also euqla
+#root_freq<-simplex(1,1,1,1, 1,1,1,1)
+root_freq<-simplex(1,1,1,1, 2,2,4,4)
+#root_freq := Q_rate.getStationaryFrequencies()
+
+# inferring pi
+#pi_prior <- v(1,1,1,1)
+#root_freq  ~ dnDirichlet(pi_prior)
+#moves.append( mvBetaSimplex(root_freq, weight=3) )
+#moves.append( mvDirichletSimplex(root_freq, weight=1) )
+
+#make dnPhyloCTMC
+phySeq ~ dnPhyloCTMC(tree=timetree, Q=Q_rate, rootFrequencies=root_freq, branchRates=branch_rates, type="Standard", coding="variable")
+phySeq.clamp(chars)

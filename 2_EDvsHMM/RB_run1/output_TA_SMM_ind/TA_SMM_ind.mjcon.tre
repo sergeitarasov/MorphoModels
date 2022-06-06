@@ -11,5 +11,5 @@
 End;
 
 Begin trees;
-tree TREE1 = [&U](A[&index=4]:1.000000,(B[&index=3]:0.849242,(D[&index=2]:0.371265,C[&index=1]:0.371265)[&index=5,posterior=0.994294,age_95%_HPD={0.238077,0.568961}]:0.477977)[&index=6,posterior=0.624822,age_95%_HPD={0.636687,0.999831}]:0.150758)[&index=7,posterior=1.000000,age_95%_HPD={1,1}]:0.000000;
+tree TREE1 = [&U](B[&index=4]:1.000000,A[&index=3]:1.000000,(D[&index=2]:0.557067,C[&index=1]:0.557067)[&index=5,posterior=0.907275,age_95%_HPD={0.333101,0.855766}]:0.442933)[&index=6,posterior=1.000000,age_95%_HPD={1,1}]:0.000000;
 End;

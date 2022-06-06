@@ -1,0 +1,96 @@
+chars <- readDiscreteCharacterData("data/TA-50char.nex")
+chars <- readDiscreteCharacterData("./data/TA-50char.nex")
+chars <- readDiscreteCharacterData(".../data/TA-50char.nex")
+chars <- readDiscreteCharacterData("//data/TA-50char.nex")
+chars <- readDiscreteCharacterData("../data/TA-50char.nex")
+q()
+pow.p
+()
+ss = steppingStoneSampler(file="output/posterior/" + analysis_name + ".out", powerColumnName="power", likelihoodColumnName="likelihood")
+ss = steppingStoneSampler(file="../output/posterior/" + analysis_name + ".out", powerColumnName="power", likelihoodColumnName="likelihood")
+ss.marginal()
+?ls()
+ls("function")
+ls(function=TRUE)
+ls(TRUE)
+?write
+write(ss.marginal, filename="M_Ln.txt", append=True))
+write(ss.marginal(), filename="M_Ln.txt", append=True))
+write(ss.marginal(), filename="M_Ln.txt", append=True)
+write(ss.marginal(), filename="M_Ln.txt", append=TRUE)
+txt= analysis_name + ss.marginal() + "\\n"
+write(txt, filename="M_Ln.txt", append=TRUE)
+txt= analysis_name +": " + ss.marginal() + "\\n"
+write(txt, filename="M_Ln.txt", append=TRUE)
+q()
+?dnPhyloCTMC
+source("Q_ED.Rev")
+Q_rate
+Q_rate.methods()
+Q.rate.getStationaryFrequencies()
+Q_rate.getStationaryFrequencies()
+dnDirichlet(v(1,1))
+er~dnDirichlet(v(1,1))
+er
+er[1]
+?dnPhyloCTMC
+q()
+q
+rates
+Q_rate
+root_freq
+q()
+?dnPhyloCTMC
+?simplex
+q()
+?dnDirichlet
+q()
+?steppingStoneSampler
+q()
+?mnFile
+q()
+a()
+q()
+1/.5
+q()
+?steppingStoneSampler
+?powerPosterior
+q()
+Q_rate
+Q_rate-Q_rate
+Q_rate+Q_rate
+rate
+rates
+rates-rates
+q()
+source("Q_ED_M6.Rev")
+Q_rate
+?fnFreeK
+q()
+mvBetaSimplex
+?mvBetaSimplex
+?mcmmc
+?mcmc
+q()
+ss = steppingStoneSampler(filename = out_folder + "posterior/" + analysis_name + ".post", powerColumnName="power", likelihoodColumnName="likelihood")
+q()
+?powerPosterior
+?powerPosterior.run
+version
+version()
+q()
+?powerPosterior
+q()
+source("Q_ED_M3.Rev")
+rates
+Q_rate
+Q_rate := fnFreeK(transition_rates=rates, rescaled=true, matrixExponentialMethod="eigen")
+Q_rate
+root_freq
+quit()
+q()
+?mccTree
+?mapTree
+q()
+simplex(1,1,1,1, 1,1,1,1)
+simplex(1,1,1,1, 2,2,4,4)

@@ -19,3 +19,4 @@ rates
 Q_rate.getTransitionProbabilities(rate=0.1)
 Q_rate.getTransitionProbabilities(rate=1)
 q()
+quit()
