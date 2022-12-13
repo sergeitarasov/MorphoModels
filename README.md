@@ -15,3 +15,7 @@ This repository contains scripts for reproducing analyses from the study "Taraso
 - - R scripts (in *RB_run_1/4a_R*) to simulate trees and characters under the ED6 model.
 - - RevBayes scripts to perform tree inferences under the ED6, ED3, and two SMMs.
 - - R scripts (in *RB_run_1/4a_R*) to calculate boostrapped p-values.
+
+ <p align="left">
+  <img src="https://github.com/sergeitarasov/MorphoModels/blob/main/vignettes/Fig_icon.png" width="100" title="hover text">
+</p>  
