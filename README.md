@@ -1,4 +1,5 @@
-# MorphoModels
+# Embedded Dependency (ED) models for inapplicable morphological characters
+
  <p align="center">
   <img src="https://github.com/sergeitarasov/MorphoModels/blob/main/vignettes/Fig_icon.png" width="700" title="hover text">
 </p>  
@@ -12,10 +13,10 @@ This repository contains [vignette](https://github.com/sergeitarasov/MorphoModel
  
 ## The scripts used in [Tarasov (2022)](https://www.biorxiv.org/content/10.1101/2021.04.26.441495v3)
 
-You can download the entire repository by clicking on the green `Code` button and then selecting `Download ZIP` in the upper right corner. It may also be downloaded by using this code:
+You can download the entire repository by clicking on the green `Code` button and then selecting `Download ZIP` in the upper right corner. Or by using this command from within terminal:
 
-``` r
-$ git clone https://github.com/sergeitarasov/MorphoModels
+``` bash
+git clone https://github.com/sergeitarasov/MorphoModels
 ```
 
 - **1_ED_model_performance** The scripts for "1. ED models and SMMs: fixed data".
