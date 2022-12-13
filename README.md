@@ -7,7 +7,7 @@
 
 This repository contains [vignette](https://github.com/sergeitarasov/MorphoModels/wiki/Constructing-rate-matrices-for-ED-models) and **scripts** for setting up and running Embedded Dependency (ED) models for phylogenetic inference with inapplicable morphological data [(Tarasov 2022)](https://www.biorxiv.org/content/10.1101/2021.04.26.441495v3).
 
-* Here is a [vignette](https://github.com/sergeitarasov/MorphoModels/wiki/Constructing-rate-matrices-for-ED-models) for setting up ED models and rate matrices to run in RevaBayes or other R packages.
+* [Here is a vignette](https://github.com/sergeitarasov/MorphoModels/wiki/Constructing-rate-matrices-for-ED-models) for setting up ED models and rate matrices to run in RevaBayes or other R packages.
 * Below are the **scripts** for reproducing analyses from [Tarasov (2022)](https://www.biorxiv.org/content/10.1101/2021.04.26.441495v3).
  
 ## The scripts used in [Tarasov (2022)](https://www.biorxiv.org/content/10.1101/2021.04.26.441495v3)
