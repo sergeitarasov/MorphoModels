@@ -22,7 +22,7 @@ $ git clone https://github.com/sergeitarasov/MorphoModels
 - - RevBayes scripts for running tree inference with the ED models and calculating marginal likelihood under fixed data.
 
 - **2_EDvsHMM** The scripts for "1. ED models and SMMs: fixed data".
-- - RevBayes scripts for tree inference (and marginal likelihood calculation) with the expanded ED models and SMM  under fixed data. 
+- - RevBayes scripts for tree inference (and marginal likelihood calculation) with expanded ED models and SMM  under fixed data. 
 
 - **3_ED_TailColor_problem** The scripts for "3. ED and Tail Color Problem".
 - - RevBayes scripts to test the resolution of LTC in the tail color problem under fixed data. 
