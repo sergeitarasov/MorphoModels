@@ -1,0 +1,6 @@
+install.packages("remotes")
+library(remotes)
+install_github("phenoscape/rphenoscape")
+install.packages("numbers")
+install_github("uyedaj/rphenoscate", build_vignettes = TRUE)
+library(rphenoscate)
