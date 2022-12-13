@@ -1,4 +1,5 @@
-# MorphoModels
+# Embedded Dependency (ED) models for inapplicable morphological characters
+
  <p align="center">
   <img src="https://github.com/sergeitarasov/MorphoModels/blob/main/vignettes/Fig_icon.png" width="700" title="hover text">
 </p>  
