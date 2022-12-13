@@ -1,7 +1,23 @@
 # MorphoModels
+ <p align="center">
+  <img src="https://github.com/sergeitarasov/MorphoModels/blob/main/vignettes/Fig_icon.png" width="700" title="hover text">
+</p>  
+
+# Content
+
+This repository contains [vignette](https://github.com/sergeitarasov/MorphoModels/wiki/Constructing-rate-matrices-for-ED-models) and **scripts** for setting up and running Embedded Dependency (ED) models for phylogenetic inference with inapplicable morphological data ([Tarasov 2022](https://www.biorxiv.org/content/10.1101/2021.04.26.441495v3)).
+
+* Here is a [vignette](https://github.com/sergeitarasov/MorphoModels/wiki/Constructing-rate-matrices-for-ED-models) for setting up ED matrices to run in RevaBayes or other R packages.
+* Below are the **scripts** for reproducing analyses from [Tarasov (2022)](https://www.biorxiv.org/content/10.1101/2021.04.26.441495v3).
  
-This repository contains scripts for reproducing analyses from the study "Tarasov S., 2022. New phylogenetic Markov models for inapplicable morphological characters" available at [bioRxiv](https://www.biorxiv.org/content/10.1101/2021.04.26.441495v2).
- 
+## The scripts used in [Tarasov (2022)](https://www.biorxiv.org/content/10.1101/2021.04.26.441495v3)
+
+To download the entire repository click on `Code`in the upper right corner or use this:
+
+``` r
+$ git clone https://github.com/YOUR-USERNAME/YOUR-REPOSITORY
+```
+
 - **1_ED_model_performance** The scripts for "1. ED models and SMMs: fixed data".
 - - RevBayes scripts for running tree inference with the ED models and calculating marginal likelihood under fixed data.
 
@@ -16,6 +32,9 @@ This repository contains scripts for reproducing analyses from the study "Taraso
 - - RevBayes scripts to perform tree inferences under the ED6, ED3, and two SMMs.
 - - R scripts (in *RB_run_1/4a_R*) to calculate boostrapped p-values.
 
- <p align="left">
-  <img src="https://github.com/sergeitarasov/MorphoModels/blob/main/vignettes/Fig_icon.png" width="100" title="hover text">
-</p>  
+
+# References
+
+Tarasov, Sergei. 2022. “New Phylogenetic Markov Models for Inapplicable
+Morphological Characters.” *bioRxiv*, 2021–04.
+<https://www.biorxiv.org/content/10.1101/2021.04.26.441495v3.abstract>.
