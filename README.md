@@ -36,6 +36,5 @@ git clone https://github.com/sergeitarasov/MorphoModels
 
 # References
 
-Tarasov, Sergei. 2022. “New Phylogenetic Markov Models for Inapplicable
-Morphological Characters.” *bioRxiv*, 2021–04.
-<https://www.biorxiv.org/content/10.1101/2021.04.26.441495v3.abstract>.
+Tarasov, S., 2023. New phylogenetic Markov models for inapplicable morphological characters. *Systematic Biology*, 72(3), pp.681-693.
+<https://academic.oup.com/sysbio/article/72/3/681/7036827>.
